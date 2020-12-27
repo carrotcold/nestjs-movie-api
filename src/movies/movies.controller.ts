@@ -23,8 +23,6 @@ export class MoviesController {
 
   @Get('/:id')
   getOne(@Param('id') movieId: number): Movie {
-    // param으로 넘어온 값은 기본적으로 string이지만
-    // validation pipe에 의해 number로 transform
     return this.moviesService.getOne(movieId);
   }
 
